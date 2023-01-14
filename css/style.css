@@ -1,0 +1,320 @@
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.head 
+{
+    border: 1px solid black;
+}
+.menu-bar
+{
+    background: rgb(0,100,0);
+    text-align: center;
+}
+.menu-bar ul 
+{
+    display: inline-flex;
+    list-style: none;
+    color: #fff;
+    font-size: 1.2rem;
+}
+.menu-bar ul li
+{
+   width: 120px;
+   margin: 15px;
+   padding: 15px;
+} 
+.menu-bar ul li a
+{
+    text-decoration: none;
+    color: #fff;
+}
+.active, .menu-bar ul li:hover
+{
+    background: #2bab0d;
+    border-radius: 3px;
+}
+.sub-menu-1
+{
+    display: none;
+}
+.menu-bar ul li:hover .sub-menu-1
+{
+    display: block;
+    position: absolute;
+    background: rgb(0, 101, 0);
+    margin-top: 15px;
+    margin-left: -15px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul
+{
+    display: block;
+    margin: 10px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li
+{
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dotted #fff;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+
+}
+.menu-bar ul li:hover .sub-menu-1 ul li:last-child
+{
+    border-bottom: none;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li a:hover
+{
+    color: #b2ff00;
+} 
+/* Окончание секции header */
+
+/* Начало секции mein */
+/* .container-1
+{
+    display: grid;
+    grid-template-columns:150px auto;
+    border: 1px solid #b2ff00;
+} 
+.info
+{
+    padding: 15px 35px;
+    font-size: 21px;
+    color: #fff;
+    background: lightblue;
+    border: 2px dashed #aaa;   
+}
+.content
+{
+    padding: 15px 35px;
+    font-size: 21px;
+    color: #fff;
+    background: lightblue;
+    border: 2px dashed #aaa;
+}
+
+.el {
+    padding: 15px 35px;
+    font-size: 21px;
+    color: #fff;
+    background: lightblue;
+    border: 2px dashed #aaa;
+} */
+.container
+{
+    display: grid;
+    grid-template:
+    "image image image" 100px
+    "nav nav nav"
+    "info contente aside"
+    "footer footer footer" 100px;
+    grid-template-columns: 20% 1fr 20%;
+    gap: 3px;
+    background-color: rgb(231, 227, 227);
+}
+.zet
+{
+    padding: 15px 35px;
+    font-size: 21px;
+    color: black;
+    background: lightgreen;  
+    border: 2px dashed #aaa;   
+}
+.foto 
+{
+    grid-area: image; 
+    background: #aaa;
+    text-align: center;
+    font-size: 1.9rem;
+}
+.menu-bar
+{
+    grid-area: nav;
+}
+.article-container
+{
+    grid-area: info;
+}
+.content
+{
+    grid-area: contente;
+}
+.aside
+{
+    grid-area: aside;
+}
+.footer
+{
+    grid-area: footer;
+}
+
+/* Начало левой боковой секции  */
+.article-container
+{
+    display: grid;
+    grid-template-rows: repeat( 3, 1fr );
+    height: 100vh; 
+    gap: 5px;    
+}
+.box-1
+{
+    padding: 15px 35px;
+    font-size: 21px;
+    color: black;
+    background: lightgreen;  
+}
+.box-2
+{
+    padding: 15px 35px;
+    font-size: 21px;
+    color: black;
+    background: lightgreen;  
+}
+.box-3
+{
+    padding: 15px 35px;
+    font-size: 21px;
+    color: black;
+    background: lightgreen; 
+}
+/* Окончание левой боковой секции  */
+
+/* Начало центральной части */
+
+.home
+{  
+    margin-top: 20px;  
+    text-align: center;
+
+}
+.home-header
+{
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+.home-body
+{    
+   font-size: 1.5rem;
+   text-align: center;
+   margin-bottom: 20px;
+}
+.home-footer
+{
+    font-weight: lighter;
+    font-size: 1.2rem;
+}
+.home-footer h3
+{
+    font-weight: lighter;
+    font-size: 1.5rem;
+}
+
+
+
+/* Окончание центральной части */
+
+/* Начало правой боковой секции */
+.aside-container
+{
+    display: grid;
+    grid-template-rows: repeat( 3, 1fr );
+    height: 100vh; 
+    gap: 5px;      
+}
+.phone
+{
+    align-items: center;
+    text-align: left;
+    padding: 15px 15px;
+    color: black;
+    
+}
+.phone > h4
+{
+    margin-bottom: 10px;
+    font-weight: lighter;
+    font-size: 1.2rem;
+}
+.phone > p
+{
+    margin-bottom: 7px;
+    color:  rgb(51, 49, 49);
+}
+.phone-local
+{
+    align-items: center;
+    text-align: left;
+    padding: 15px 15px;
+    color: black; 
+}
+.phone-local > h4
+{
+    margin-bottom: 10px;
+    font-weight: lighter;
+    font-size: 1.2rem;
+}
+.phone-local > p
+{
+    margin-bottom: 7px;
+    color:  rgb(51, 49, 49);
+}
+.referens
+{   
+    align-items: center;
+    text-align: left;
+    padding: 15px 15px;
+    color: black;
+}    
+.referens > h4
+{
+    margin-bottom: 7px;
+    font-weight: lighter;
+    font-size: 1.2rem
+
+    
+}
+.referens > a
+{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(51, 49, 49);
+    text-decoration: none;
+    transition: all .3s ease;
+}
+.referens > a > p
+{
+    margin-bottom: 10px;
+}
+.referens > a > p
+{
+color: rgb(0, 101, 0);
+}
+
+/* Окончанеи правой боковой секции */
+
+/* Начало секции footer */
+.footer
+{
+    display: flex;
+    align-items: center;
+    height: 72px;
+    background: rgb(0,100,0); 
+    color: #fff;
+}
+.footer-container
+{
+    width: 1110px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-copyright
+{
+  font-size: 14px;
+}
+/* Окончанеи секции footer */
