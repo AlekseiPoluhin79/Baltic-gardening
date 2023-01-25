@@ -8,3 +8,17 @@
     border-bottom: 2px solid rgb(0,100,0);
     float: left;
 }
+.protocol-box
+{
+    font-size: 17px;
+    padding-bottom: 5px;
+}
+.protocol-box > ul
+{
+    list-style: none;
+    margin-left: 3%;
+}
+.protocol-box > ul > li
+{
+    margin-bottom: 7px;
+}
